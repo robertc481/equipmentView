@@ -1,0 +1,28 @@
+button {
+  height: 60px;
+  width: 60px;
+  color: white;
+  border: 1.5px solid rgb(0, 235, 178);
+  font-weight: 300;
+  font-size: 2.5rem;
+  background: none;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+
+  span {
+    display: block;
+    background-color: #fff;
+    width: 30px;
+    height: 1.5px;
+    position: absolute;
+    top: calc(50% - 0.75px);
+    left: calc(50% - 15px);
+  }
+
+  span:nth-of-type(2) {
+    transform: rotate(90deg);
+  }
+
+}

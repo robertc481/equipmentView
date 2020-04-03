@@ -1,0 +1,38 @@
+.runesContainer {
+  color: rgb(0, 235, 178);
+  font-family: 'Montserrat';
+  font-size: .8rem;
+  width: 100%;
+  min-width: 300px;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 15px;
+
+  .runesArea {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    div {
+      height: 60px;
+      width: 60px;
+      margin: 5px;
+      border: 2px solid rgb(48, 61, 66);
+      background-image: url('../../../assets/runeImg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid rgb(0, 235, 178);
+      }
+    }
+  }
+}

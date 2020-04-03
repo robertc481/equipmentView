@@ -1,0 +1,61 @@
+.rewardsContainer {
+  color: rgb(0, 235, 178);
+  font-family: 'Montserrat';
+  font-size: .8rem;
+  width: 100%;
+  min-width: 300px;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5px;
+
+  p {
+    color: gray;
+    font-size: .6rem;
+    margin: 5px 0;
+
+    span {
+      color: white;
+    }
+  }
+
+  .rewardsArea {
+
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    div {
+      background: none;
+      height: 60px;
+      width: 60px;
+      margin: 5px;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 2px solid black;
+
+    }
+
+    .reward {
+      border: 2px solid rgb(48, 61, 66);
+      background-image: url('../../../assets/sample-reward.png');
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid rgb(0, 235, 178);
+      }
+    }
+
+    .selectedItem {
+      border: 2px solid goldenrod;
+    }
+
+
+  }
+}

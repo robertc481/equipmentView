@@ -1,0 +1,12 @@
+<div class='eqPreview closed' id='eqPreview'>
+  <button (click)='closePreview()'> <span></span><span></span></button>
+  <div class='itemContainer'>
+    <span class='itemContainer__name'>{{previewedItem.name}}</span>
+    <img class='itemContainer__image'
+      src="{{ previewedItem.type == 'chest'? '../../../assets/sample-chest.png': ( previewedItem.type == 'reward'? '../../../assets/sample-reward.png' : '') }}"
+      alt="" />
+    {{ previewedItem.type == 'reward'? 'Klucz' :  '' }}
+    <span class="{{ previewedItem.type == 'reward'? 'itemContainer__description key' : 'itemContainer__description'}}" (click)='openChest()'>{{ previewedItem.type == 'chest' ? 'Otwórz Skrzynkę' : previewedItem.key }}</span>
+  </div>
+
+</div>

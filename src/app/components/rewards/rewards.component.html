@@ -1,0 +1,12 @@
+<div class='rewardsContainer'>
+  {{title.toUpperCase()}}
+  <p>WARTOŚĆ = <span>${{valueOfItems()}}</span></p>
+  <main class='rewardsArea'>
+    <div *ngFor='let item of myItems[0]; let i = index' id={{item.price.toFixed(0)}}
+      [ngClass]=" { 'reward' :  item.type == 'reward', 'selectedItem': selected == item}" (click)='selectThis(item)'>
+    </div>
+    <div></div>
+
+    <app-add-new-item-button [item]='itemType'></app-add-new-item-button>
+  </main>
+</div>

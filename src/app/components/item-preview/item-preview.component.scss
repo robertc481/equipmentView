@@ -1,0 +1,110 @@
+.eqPreview {
+  width: 100vw;
+  height: 90vh;
+  background-color: hsl(125, 0, 20);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width:640px) {
+    width: 60vw;
+  }
+
+  >* {
+    color: rgb(0, 235, 178);
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+  }
+
+  button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+
+    span {
+      width: 50%;
+      height: 2.5px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+
+    }
+
+    span:nth-of-type(2) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &.closed {
+    display: none;
+  }
+
+  .itemContainer {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__name {
+      display: block;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    &__image {
+      width: 60%;
+      height: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+      .chest {
+
+        background-image: url('../../../assets/sample-chest.png');
+      }
+
+      .reward {
+
+        background-image: url('../../../assets/sample-reward.png');
+      }
+    }
+
+    &__description {
+      display: flex;
+      width: 30%;
+      height: 12.5%;
+      background-color: rgb(0, 235, 178);
+      font-family: 'Montserrat';
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: .7rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: black;
+
+
+    }
+
+    .key {
+      background-color: gray;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class='chestsContainer'>
+  {{title.toUpperCase()}}
+  <main class='chestsArea' id='chestsArea'>
+    <div *ngFor='let item of myItems[0]; let i = index' id={{item.price.toFixed(0)}}
+      [ngClass]=" { 'chest' :  item.type == 'chest', 'selectedItem': selected == item}" (click)='selectThis(item)'>
+    </div>
+
+    <app-add-new-item-button [item]='itemType'></app-add-new-item-button>
+  </main>
+</div>
